@@ -2,9 +2,11 @@
  "name": "道路表編輯器",
  "short_name": "道路表",
  "lang": "zh-Hant",
+ "id": "./",
  "start_url": "./",
  "scope": "./",
- "display": "browser",
+ "display": "standalone",
+ "description": "永和警衛組勤務道路表編輯器",
  "background_color": "#f6f3ee",
  "theme_color": "#176a70",
  "icons": [
