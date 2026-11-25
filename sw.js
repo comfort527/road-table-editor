@@ -2,8 +2,8 @@
 // - 打開網頁：先向網路抓最新版（有網路時跟沒裝 App 一樣，部署後立刻是新版）；沒網路或太慢才用存起來的那份
 // - 圖示、manifest：先用存起來的，背景再更新
 // - 雲端同步（GitHub）、AI、班次查詢等其他網站的連線：完全不經過這裡
-// 版本號每次建置都會換（0da858b2fc0f），舊的快取會自動清掉
-const CACHE = 'road-editor-0da858b2fc0f';
+// 版本號每次建置都會換（dba61ae42842），舊的快取會自動清掉
+const CACHE = 'road-editor-dba61ae42842';
 const CORE = ['./', 'manifest.webmanifest?v=2', 'icon-192.png?v=2', 'icon-512.png?v=2', 'apple-touch-icon.png?v=2'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => Promise.all(CORE.map(u => c.add(new Request(u, { cache: 'reload' })).catch(() => {})))).then(() => self.skipWaiting()));
